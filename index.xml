@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Up logs</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Up logs</description>
+    <title>Logs</title>
+    <link>http://ccjeat.github.io/</link>
+    <description>Recent content on Logs</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Tue, 05 Jan 2016 16:31:07 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://ccjeat.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>clojure functional programming</title>
-      <link>http://localhost:1313/blog/2016/01/05/clojure-functional-programming/</link>
+      <link>http://ccjeat.github.io/blog/2016/01/05/clojure-functional-programming/</link>
       <pubDate>Tue, 05 Jan 2016 16:31:07 +0800</pubDate>
       
-      <guid>http://localhost:1313/blog/2016/01/05/clojure-functional-programming/</guid>
+      <guid>http://ccjeat.github.io/blog/2016/01/05/clojure-functional-programming/</guid>
       <description>&lt;p&gt;#Clojure函数式编程&lt;/p&gt;
 
 &lt;p&gt;[toc]
@@ -69,10 +69,10 @@ jvm并不支持尾递&lt;/p&gt;
     
     <item>
       <title>maven.war.plugin</title>
-      <link>http://localhost:1313/blog/2016/01/05/maven.war.plugin/</link>
+      <link>http://ccjeat.github.io/blog/2016/01/05/maven.war.plugin/</link>
       <pubDate>Tue, 05 Jan 2016 11:44:21 +0800</pubDate>
       
-      <guid>http://localhost:1313/blog/2016/01/05/maven.war.plugin/</guid>
+      <guid>http://ccjeat.github.io/blog/2016/01/05/maven.war.plugin/</guid>
       <description>
 
 &lt;h1 id=&#34;maven-war-plugin-使用说明:53af24a1bdc73cddb81b02b3b603f129&#34;&gt;maven war plugin 使用说明&lt;/h1&gt;
@@ -129,10 +129,10 @@ jvm并不支持尾递&lt;/p&gt;
     
     <item>
       <title>about</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://ccjeat.github.io/about/</link>
       <pubDate>Tue, 05 Jan 2016 11:37:10 +0800</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://ccjeat.github.io/about/</guid>
       <description>
 
 &lt;h1 id=&#34;there-is-about-md:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;there is about.md&amp;hellip;&lt;/h1&gt;

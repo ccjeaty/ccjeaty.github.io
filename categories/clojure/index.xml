@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Clojure on Up logs</title>
-    <link>http://localhost:1313/categories/clojure/</link>
-    <description>Recent content in Clojure on Up logs</description>
+    <title>Clojure on Logs</title>
+    <link>http://ccjeat.github.io/categories/clojure/</link>
+    <description>Recent content in Clojure on Logs</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Tue, 05 Jan 2016 16:31:07 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/clojure/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://ccjeat.github.io/categories/clojure/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>clojure functional programming</title>
-      <link>http://localhost:1313/blog/2016/01/05/clojure-functional-programming/</link>
+      <link>http://ccjeat.github.io/blog/2016/01/05/clojure-functional-programming/</link>
       <pubDate>Tue, 05 Jan 2016 16:31:07 +0800</pubDate>
       
-      <guid>http://localhost:1313/blog/2016/01/05/clojure-functional-programming/</guid>
+      <guid>http://ccjeat.github.io/blog/2016/01/05/clojure-functional-programming/</guid>
       <description>&lt;p&gt;#Clojure函数式编程&lt;/p&gt;
 
 &lt;p&gt;[toc]
