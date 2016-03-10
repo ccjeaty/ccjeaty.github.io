@@ -1,87 +1,95 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<div class="single">
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.14" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:1313//index.xml">
 
-  <title>clojure functional programming &middot; Jty</title>
+    
+    <title>clojure functional programming - Logs</title>
+    <meta property='og:title' content="clojure functional programming - Logs">
+    <meta property="og:type" content="article">
+    
 
-  
-  <link rel="stylesheet" href="http://ccjeaty.github.io/css/poole.css">
-  <link rel="stylesheet" href="http://ccjeaty.github.io/css/hyde.css">
-  <link rel="stylesheet" href="http://ccjeaty.github.io/css/poole-overrides.css">
-  <link rel="stylesheet" href="http://ccjeaty.github.io/css/hyde-overrides.css">
-  <link rel="stylesheet" href="http://ccjeaty.github.io/css/hyde-x.css">
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <meta property="og:url" content="http://localhost:1313/blog/2016/01/05/clojure-functional-programming/">
+    
+    
 
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://ccjeaty.github.io/touch-icon-144-precomposed.png">
-  <link href="http://ccjeaty.github.io/favicon.png" rel="icon">
+  </head>
 
-  
-  
-  
-  
+  <body>
 
-  <meta name="description" content="">
-  <meta name="keywords" content="clojure">
-  
-</head>
-<body>
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      
-      <h1>Jty</h1>
-      
+    <div class="container-fluid">
+      <header class="site">
+        <div class="title"><a href="http://localhost:1313/">Logs</a></div>
+      </header>
     </div>
 
-    <ul class="sidebar-nav">
-      <li class="sidebar-nav-item"><a href="http://ccjeaty.github.io/">Blog</a></li>
-      
-    </ul>
-
-    <ul class="sidebar-nav">
-      <li class="sidebar-nav-item">
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      </li>
-    </ul>
-
-    
-
-    <p>Copyright &copy; 2016 <a href="http://ccjeaty.github.io/license/">License</a><br/>
-       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
-  </div>
-</div>
+    <div class="container site">
 
 
-<div class="content container">
-  <div class="post">
-    <h1>clojure functional programming</h1>
-    <span class="post-date">Jan 5, 2016 &middot; 1 minute read
-    
-    <br/>
-    <a class="label" href="http://ccjeaty.github.io/categories/clojure">clojure</a><a class="label" href="http://ccjeaty.github.io/categories/fp">fp</a>
-    </span>
-    <p>#Clojure函数式编程</p>
+  <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
 
-<p>[toc]
-##函数
-###一等函数
-函数在clj里面是一等公民;指的是函数可以被当做普通数据对待，具有以下特性：</p>
+    <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://localhost:1313/"/>
+    <meta itemprop="dateModified" content="2016-01-05T16:31:07&#43;08:00">
+    <meta itemprop="headline" content="clojure functional programming">
+    <meta itemprop="description" content="Clojure函数式编程 [toc] 函数 一等函数 函数在clj里面是一等公民;指的是函数可以被当做普通数据对待，具有以下特性： 可以按需创建 可以在数据结构中存储 可以当做函数实参 可以当做函数返回值 这此特性可以为程序提供更多的灵活性. 闭包 闭包指的是函数可以访问成员变量，一般需要函数A返回一个函数B，在返回函数B里持有函数A的成员变量，形成一个闭包。 也可以看做是函数定制的一种手段 (defn repeat-n [n] (fn [num] (* n num))) (def repeat-2 (repeat-n 2)) (repeat-2 5) ;;=&gt; 10 尾递归 尾递归顾名思义,是指在函数尾部进行了递归调用. 与一般的递归区别于返回方式&amp;资源释放. 一般递归需要依次返回,返回值是由首次调用函数返回的,资源需要返回后才能被释放.如递归调用函数A,A1调用A2最终返回值是由A2返回给A1,A1再返回给caller. 并且在A2执行时, A1的资源不会被释放.所以调用时要考虑递归层级问题,如果层级太深会发生堆栈溢出. 尾递归是在A2执行时,A1的资源会被释放,并且最终返回结果是由A2直接返回给caller.所以在调用时,不会出现溢出问题. jvm并不支持尾递 ;;一般递归 (defn pow [base exp] &quot;计算base的exp次幂&quot; (if (zero? exp) 1 (* base (pow base (dec exp)))) ) ;;尾递归版本(clojure版本) (defn pow (base exp) (letfn [(kapow [base exp sum] (if (zero? exp) sum (recure base">
+    <meta itemprop="url" content="http://localhost:1313/blog/2016/01/05/clojure-functional-programming/">
+    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="http://localhost:1313//images/logo.png" />
+      <meta itemprop="width" content="800">
+      <meta itemprop="height" content="800">
+    </div>
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="http://localhost:1313//images/logo.jpg">
+        <meta itemprop="width" content="100">
+        <meta itemprop="height" content="100">
+      </div>
+      <meta itemprop="name" content="Logs">
+    </div>
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="">
+    </div>
+
+    <header>
+
+      <div class="clearfix">
+        <div class="pull-left image"></div>
+        <div class="detail">
+          <time itemprop="datePublished" pubdate="pubdate" datetime="2016-01-05T16:31:07&#43;08:00">Tue, Jan 5, 2016</time>
+          <h1 class="title">clojure functional programming</h1>
+        </div>
+      </div>
+
+      <div class="share">
+        <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f&t=clojure%20functional%20programming" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f&text=clojure%20functional%20programming&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+        <a href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+        <a href="http://getpocket.com/edit?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f&title=clojure%20functional%20programming" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+      </div>
+
+    </header>
+
+    <div class="article-body" itemprop="articleBody">
+
+<h1 id="clojure函数式编程:0ba14bcd112cc5275625c24eb59b1cb6">Clojure函数式编程</h1>
+
+<p>[toc]</p>
+
+<h2 id="函数:0ba14bcd112cc5275625c24eb59b1cb6">函数</h2>
+
+<h3 id="一等函数:0ba14bcd112cc5275625c24eb59b1cb6">一等函数</h3>
+
+<p>函数在clj里面是一等公民;指的是函数可以被当做普通数据对待，具有以下特性：</p>
 
 <ul>
 <li>可以按需创建</li>
@@ -92,9 +100,12 @@
 
 <p>这此特性可以为程序提供更多的灵活性.</p>
 
-<p>###闭包
-- 闭包指的是函数可以访问成员变量，一般需要函数A返回一个函数B，在返回函数B里持有函数A的成员变量，形成一个闭包。
-- 也可以看做是<strong>函数定制</strong>的一种手段</p>
+<h3 id="闭包:0ba14bcd112cc5275625c24eb59b1cb6">闭包</h3>
+
+<ul>
+<li>闭包指的是函数可以访问成员变量，一般需要函数A返回一个函数B，在返回函数B里持有函数A的成员变量，形成一个闭包。</li>
+<li>也可以看做是<strong>函数定制</strong>的一种手段</li>
+</ul>
 
 <pre><code class="language-clojure">(defn repeat-n [n]
     (fn [num] (* n num)))
@@ -103,8 +114,9 @@
 (repeat-2 5)  ;;=&gt; 10
 </code></pre>
 
-<p>###尾递归
-尾递归顾名思义,是指在函数<strong>尾部</strong>进行了递归调用. 与一般的递归区别于返回方式&amp;资源释放.
+<h3 id="尾递归:0ba14bcd112cc5275625c24eb59b1cb6">尾递归</h3>
+
+<p>尾递归顾名思义,是指在函数<strong>尾部</strong>进行了递归调用. 与一般的递归区别于返回方式&amp;资源释放.
 一般递归需要依次返回,返回值是由首次调用函数返回的,资源需要返回后才能被释放.如递归调用函数A,A1调用A2最终返回值是由A2返回给A1,A1再返回给caller. 并且在A2执行时, A1的资源不会被释放.所以调用时要考虑递归层级问题,如果层级太深会发生堆栈溢出.
 尾递归是在A2执行时,A1的资源会被释放,并且最终返回结果是由A2直接返回给caller.所以在调用时,不会出现溢出问题.
 jvm并不支持尾递</p>
@@ -125,16 +137,47 @@ jvm并不支持尾递</p>
                 (recure base (dec exp) (* base sum)))]
             (kapow base exp 1)))
 </code></pre>
-
-  </div>
-  
 </div>
 
+    <aside>
 
+      <div class="section"></div>
 
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
 
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = '';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
+    </aside>
 
-</body>
+  </article>
+
+      </div>
+
+    <div class="container-fluid">
+      <footer class="site">
+        <p>&copy; 2016 Logs &nbsp;&nbsp;
+        Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>&nbsp;&nbsp;
+        Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank">Aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
+      </footer>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+  </body>
 </html>
 
+</div>

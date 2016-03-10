@@ -1,79 +1,85 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<div class="single">
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.14" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:1313//index.xml">
 
-  <title>maven.war.plugin &middot; Jty</title>
+    
+    <title>maven.war.plugin - Logs</title>
+    <meta property='og:title' content="maven.war.plugin - Logs">
+    <meta property="og:type" content="article">
+    
 
-  
-  <link rel="stylesheet" href="http://ccjeaty.github.io/css/poole.css">
-  <link rel="stylesheet" href="http://ccjeaty.github.io/css/hyde.css">
-  <link rel="stylesheet" href="http://ccjeaty.github.io/css/poole-overrides.css">
-  <link rel="stylesheet" href="http://ccjeaty.github.io/css/hyde-overrides.css">
-  <link rel="stylesheet" href="http://ccjeaty.github.io/css/hyde-x.css">
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <meta property="og:url" content="http://localhost:1313/blog/2016/01/05/maven.war.plugin/">
+    
+    
 
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://ccjeaty.github.io/touch-icon-144-precomposed.png">
-  <link href="http://ccjeaty.github.io/favicon.png" rel="icon">
+  </head>
 
-  
-  
-  
-  
+  <body>
 
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  
-</head>
-<body>
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      
-      <h1>Jty</h1>
-      
+    <div class="container-fluid">
+      <header class="site">
+        <div class="title"><a href="http://localhost:1313/">Logs</a></div>
+      </header>
     </div>
 
-    <ul class="sidebar-nav">
-      <li class="sidebar-nav-item"><a href="http://ccjeaty.github.io/">Blog</a></li>
-      
-    </ul>
-
-    <ul class="sidebar-nav">
-      <li class="sidebar-nav-item">
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      </li>
-    </ul>
-
-    
-
-    <p>Copyright &copy; 2016 <a href="http://ccjeaty.github.io/license/">License</a><br/>
-       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
-  </div>
-</div>
+    <div class="container site">
 
 
-<div class="content container">
-  <div class="post">
-    <h1>maven.war.plugin</h1>
-    <span class="post-date">Jan 5, 2016 &middot; 1 minute read
-    </span>
-    
+  <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+    <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://localhost:1313/"/>
+    <meta itemprop="dateModified" content="2016-01-05T11:44:21&#43;08:00">
+    <meta itemprop="headline" content="maven.war.plugin">
+    <meta itemprop="description" content="maven war plugin 使用说明 [TOC] intro 主要用于处理在构建war包时的一些操作, 目前只用于对资源文件的处理.把目前使用到过的一些配置记录下来. 用以备忘. 直接贴一个比较完整的配置, 一看便知: &lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt; &lt;version&gt;2.6&lt;/version&gt; &lt;configuration&gt; &lt;filters&gt; &lt;!-- 集中管理变量值, --&gt; &lt;filter&gt;properties/config.prop&lt;/filter&gt; &lt;/filters&gt; &lt;nonFilteredFileExtensions&gt; &lt;!-- default value contains jpg,jpeg,gif,bmp,png --&gt; &lt;nonFilteredFileExtension&gt;conf&lt;/nonFilteredFileExtension&gt; &lt;/nonFilteredFileExtensions&gt; &lt;webResources&gt; &lt;resource&gt; &lt;!-- this is relative to the pom.xml directory --&gt; &lt;directory&gt;resource2&lt;/directory&gt; &lt;includes&gt; &lt;!-- excludes --&gt; &lt;include&gt;**/*.properties&lt;/include&gt; &lt;/includes&gt; &lt;!-- this is relative to war root dir, and it will replace all of the duplicate files --&gt; &lt;targetPath&gt;WEB-INF/classes&lt;/targetPath&gt; &lt;filtering&gt;true&lt;/filtering&gt; &lt;/resource&gt; &lt;/webResources&gt; &lt;/configuration&gt; &lt;/plugin&gt; &lt;/plugins&gt; &lt;/build&gt; 资源文件处理 执行compile命令的时候可以对项目的资源文件进行处理, 常用的处理有以下几种: - 替换变量(与profile配合使用) 在插件中的变量也是以${prop.name}方式来书写的, 如果文件内容中有相应的变量, 正好maven的ctx中又有相应的值,则会对变量进行替换.">
+    <meta itemprop="url" content="http://localhost:1313/blog/2016/01/05/maven.war.plugin/">
+    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="http://localhost:1313//images/logo.png" />
+      <meta itemprop="width" content="800">
+      <meta itemprop="height" content="800">
+    </div>
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="http://localhost:1313//images/logo.jpg">
+        <meta itemprop="width" content="100">
+        <meta itemprop="height" content="100">
+      </div>
+      <meta itemprop="name" content="Logs">
+    </div>
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="">
+    </div>
+
+    <header>
+
+      <div class="clearfix">
+        <div class="pull-left image"></div>
+        <div class="detail">
+          <time itemprop="datePublished" pubdate="pubdate" datetime="2016-01-05T11:44:21&#43;08:00">Tue, Jan 5, 2016</time>
+          <h1 class="title">maven.war.plugin</h1>
+        </div>
+      </div>
+
+      <div class="share">
+        <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fmaven.war.plugin%2f&t=maven.war.plugin" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fmaven.war.plugin%2f&text=maven.war.plugin&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+        <a href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fmaven.war.plugin%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+        <a href="http://getpocket.com/edit?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fmaven.war.plugin%2f&title=maven.war.plugin" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+      </div>
+
+    </header>
+
+    <div class="article-body" itemprop="articleBody">
 
 <h1 id="maven-war-plugin-使用说明:53af24a1bdc73cddb81b02b3b603f129">maven war plugin 使用说明</h1>
 
@@ -124,16 +130,47 @@
 在插件中的变量也是以<strong><code>${prop.name}</code></strong>方式来书写的, 如果文件内容中有相应的变量, 正好maven的ctx中又有相应的值,则会对变量进行替换.</p>
 
 <h2 id="copy非标准结构目录中的文件到war指定的文件中并指定destination:53af24a1bdc73cddb81b02b3b603f129">-   copy非标准结构目录中的文件到war指定的文件中并指定destination</h2>
-
-  </div>
-  
 </div>
 
+    <aside>
 
+      <div class="section"></div>
 
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
 
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = '';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
+    </aside>
 
-</body>
+  </article>
+
+      </div>
+
+    <div class="container-fluid">
+      <footer class="site">
+        <p>&copy; 2016 Logs &nbsp;&nbsp;
+        Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>&nbsp;&nbsp;
+        Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank">Aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
+      </footer>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+  </body>
 </html>
 
+</div>

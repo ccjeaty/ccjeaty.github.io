@@ -2,25 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Logs</title>
-    <link>http://ccjeaty.github.io/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on Logs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 05 Jan 2016 16:31:07 +0800</lastBuildDate>
-    <atom:link href="http://ccjeaty.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>clojure functional programming</title>
-      <link>http://ccjeaty.github.io/blog/2016/01/05/clojure-functional-programming/</link>
+      <link>http://localhost:1313/blog/2016/01/05/clojure-functional-programming/</link>
       <pubDate>Tue, 05 Jan 2016 16:31:07 +0800</pubDate>
       
-      <guid>http://ccjeaty.github.io/blog/2016/01/05/clojure-functional-programming/</guid>
-      <description>&lt;p&gt;#Clojure函数式编程&lt;/p&gt;
+      <guid>http://localhost:1313/blog/2016/01/05/clojure-functional-programming/</guid>
+      <description>
 
-&lt;p&gt;[toc]
-##函数
-###一等函数
-函数在clj里面是一等公民;指的是函数可以被当做普通数据对待，具有以下特性：&lt;/p&gt;
+&lt;h1 id=&#34;clojure函数式编程:0ba14bcd112cc5275625c24eb59b1cb6&#34;&gt;Clojure函数式编程&lt;/h1&gt;
+
+&lt;p&gt;[toc]&lt;/p&gt;
+
+&lt;h2 id=&#34;函数:0ba14bcd112cc5275625c24eb59b1cb6&#34;&gt;函数&lt;/h2&gt;
+
+&lt;h3 id=&#34;一等函数:0ba14bcd112cc5275625c24eb59b1cb6&#34;&gt;一等函数&lt;/h3&gt;
+
+&lt;p&gt;函数在clj里面是一等公民;指的是函数可以被当做普通数据对待，具有以下特性：&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;可以按需创建&lt;/li&gt;
@@ -31,9 +36,12 @@
 
 &lt;p&gt;这此特性可以为程序提供更多的灵活性.&lt;/p&gt;
 
-&lt;p&gt;###闭包
-- 闭包指的是函数可以访问成员变量，一般需要函数A返回一个函数B，在返回函数B里持有函数A的成员变量，形成一个闭包。
-- 也可以看做是&lt;strong&gt;函数定制&lt;/strong&gt;的一种手段&lt;/p&gt;
+&lt;h3 id=&#34;闭包:0ba14bcd112cc5275625c24eb59b1cb6&#34;&gt;闭包&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;闭包指的是函数可以访问成员变量，一般需要函数A返回一个函数B，在返回函数B里持有函数A的成员变量，形成一个闭包。&lt;/li&gt;
+&lt;li&gt;也可以看做是&lt;strong&gt;函数定制&lt;/strong&gt;的一种手段&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(defn repeat-n [n]
     (fn [num] (* n num)))
@@ -42,8 +50,9 @@
 (repeat-2 5)  ;;=&amp;gt; 10
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;###尾递归
-尾递归顾名思义,是指在函数&lt;strong&gt;尾部&lt;/strong&gt;进行了递归调用. 与一般的递归区别于返回方式&amp;amp;资源释放.
+&lt;h3 id=&#34;尾递归:0ba14bcd112cc5275625c24eb59b1cb6&#34;&gt;尾递归&lt;/h3&gt;
+
+&lt;p&gt;尾递归顾名思义,是指在函数&lt;strong&gt;尾部&lt;/strong&gt;进行了递归调用. 与一般的递归区别于返回方式&amp;amp;资源释放.
 一般递归需要依次返回,返回值是由首次调用函数返回的,资源需要返回后才能被释放.如递归调用函数A,A1调用A2最终返回值是由A2返回给A1,A1再返回给caller. 并且在A2执行时, A1的资源不会被释放.所以调用时要考虑递归层级问题,如果层级太深会发生堆栈溢出.
 尾递归是在A2执行时,A1的资源会被释放,并且最终返回结果是由A2直接返回给caller.所以在调用时,不会出现溢出问题.
 jvm并不支持尾递&lt;/p&gt;
@@ -69,10 +78,10 @@ jvm并不支持尾递&lt;/p&gt;
     
     <item>
       <title>maven.war.plugin</title>
-      <link>http://ccjeaty.github.io/blog/2016/01/05/maven.war.plugin/</link>
+      <link>http://localhost:1313/blog/2016/01/05/maven.war.plugin/</link>
       <pubDate>Tue, 05 Jan 2016 11:44:21 +0800</pubDate>
       
-      <guid>http://ccjeaty.github.io/blog/2016/01/05/maven.war.plugin/</guid>
+      <guid>http://localhost:1313/blog/2016/01/05/maven.war.plugin/</guid>
       <description>
 
 &lt;h1 id=&#34;maven-war-plugin-使用说明:53af24a1bdc73cddb81b02b3b603f129&#34;&gt;maven war plugin 使用说明&lt;/h1&gt;
