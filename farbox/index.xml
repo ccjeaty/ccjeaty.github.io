@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Farboxes on Logs</title>
+    <link>http://ccjeaty.github.io/farbox/</link>
+    <description>Recent content in Farboxes on Logs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 10 Mar 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://ccjeaty.github.io/farbox/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>mysql 管理</title>
+      <link>http://ccjeaty.github.io/FarBox/posts/mysql%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ccjeaty.github.io/FarBox/posts/mysql%E7%AE%A1%E7%90%86/</guid>
+      <description>&lt;p&gt;##重设&lt;code&gt;用户&lt;/code&gt;密码
+&lt;code&gt;sql
+set password for &#39;fred&#39;@&#39;localhost&#39;=password(&#39;passwd&#39;); 
+flush privileges;
+&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

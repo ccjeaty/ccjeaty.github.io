@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:1313//index.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://ccjeaty.github.io//index.xml">
 
     
     <title>clojure functional programming - Logs</title>
@@ -19,7 +19,7 @@
     <meta property="og:type" content="article">
     
 
-    <meta property="og:url" content="http://localhost:1313/blog/2016/01/05/clojure-functional-programming/">
+    <meta property="og:url" content="http://ccjeaty.github.io/blog/2016/01/05/clojure-functional-programming/">
     
     
 
@@ -29,7 +29,7 @@
 
     <div class="container-fluid">
       <header class="site">
-        <div class="title"><a href="http://localhost:1313/">Logs</a></div>
+        <div class="title"><a href="http://ccjeaty.github.io/">Logs</a></div>
       </header>
     </div>
 
@@ -38,19 +38,19 @@
 
   <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
 
-    <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://localhost:1313/"/>
+    <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://ccjeaty.github.io/"/>
     <meta itemprop="dateModified" content="2016-01-05T16:31:07&#43;08:00">
     <meta itemprop="headline" content="clojure functional programming">
     <meta itemprop="description" content="Clojure函数式编程 [toc] 函数 一等函数 函数在clj里面是一等公民;指的是函数可以被当做普通数据对待，具有以下特性： 可以按需创建 可以在数据结构中存储 可以当做函数实参 可以当做函数返回值 这此特性可以为程序提供更多的灵活性. 闭包 闭包指的是函数可以访问成员变量，一般需要函数A返回一个函数B，在返回函数B里持有函数A的成员变量，形成一个闭包。 也可以看做是函数定制的一种手段 (defn repeat-n [n] (fn [num] (* n num))) (def repeat-2 (repeat-n 2)) (repeat-2 5) ;;=&gt; 10 尾递归 尾递归顾名思义,是指在函数尾部进行了递归调用. 与一般的递归区别于返回方式&amp;资源释放. 一般递归需要依次返回,返回值是由首次调用函数返回的,资源需要返回后才能被释放.如递归调用函数A,A1调用A2最终返回值是由A2返回给A1,A1再返回给caller. 并且在A2执行时, A1的资源不会被释放.所以调用时要考虑递归层级问题,如果层级太深会发生堆栈溢出. 尾递归是在A2执行时,A1的资源会被释放,并且最终返回结果是由A2直接返回给caller.所以在调用时,不会出现溢出问题. jvm并不支持尾递 ;;一般递归 (defn pow [base exp] &quot;计算base的exp次幂&quot; (if (zero? exp) 1 (* base (pow base (dec exp)))) ) ;;尾递归版本(clojure版本) (defn pow (base exp) (letfn [(kapow [base exp sum] (if (zero? exp) sum (recure base">
-    <meta itemprop="url" content="http://localhost:1313/blog/2016/01/05/clojure-functional-programming/">
+    <meta itemprop="url" content="http://ccjeaty.github.io/blog/2016/01/05/clojure-functional-programming/">
     <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-      <meta itemprop="url" content="http://localhost:1313//images/logo.png" />
+      <meta itemprop="url" content="http://ccjeaty.github.io//images/logo.png" />
       <meta itemprop="width" content="800">
       <meta itemprop="height" content="800">
     </div>
     <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
       <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-        <meta itemprop="url" content="http://localhost:1313//images/logo.jpg">
+        <meta itemprop="url" content="http://ccjeaty.github.io//images/logo.jpg">
         <meta itemprop="width" content="100">
         <meta itemprop="height" content="100">
       </div>
@@ -71,10 +71,10 @@
       </div>
 
       <div class="share">
-        <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f&t=clojure%20functional%20programming" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
-        <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f&text=clojure%20functional%20programming&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
-        <a href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
-        <a href="http://getpocket.com/edit?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f&title=clojure%20functional%20programming" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+        <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2fccjeaty.github.io%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f&t=clojure%20functional%20programming" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2fccjeaty.github.io%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f&text=clojure%20functional%20programming&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+        <a href="https://plus.google.com/share?url=http%3a%2f%2fccjeaty.github.io%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+        <a href="http://getpocket.com/edit?url=http%3a%2f%2fccjeaty.github.io%2fblog%2f2016%2f01%2f05%2fclojure-functional-programming%2f&title=clojure%20functional%20programming" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
       </div>
 
     </header>
@@ -164,9 +164,9 @@ jvm并不支持尾递</p>
 
     <div class="container-fluid">
       <footer class="site">
-        <p>&copy; 2016 Logs &nbsp;&nbsp;
-        Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>&nbsp;&nbsp;
-        Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank">Aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
+        <p>&copy; 2016 Logs</p>
+        <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>,</p>
+        <p>Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank">Aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
       </footer>
     </div>
 

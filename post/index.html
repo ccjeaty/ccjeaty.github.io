@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:1313//index.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://ccjeaty.github.io//index.xml">
 
     
     <title>Posts - Logs</title>
@@ -19,7 +19,7 @@
     <meta property="og:type" content="article">
     
 
-    <meta property="og:url" content="http://localhost:1313/post/">
+    <meta property="og:url" content="http://ccjeaty.github.io/post/">
     
     
 
@@ -29,7 +29,7 @@
 
     <div class="container-fluid">
       <header class="site">
-        <div class="title"><a href="http://localhost:1313/">Logs</a></div>
+        <div class="title"><a href="http://ccjeaty.github.io/">Logs</a></div>
       </header>
     </div>
 
@@ -40,7 +40,7 @@
 
   
   <article class="li">
-  <a href="http://localhost:1313/blog/2016/01/05/clojure-functional-programming/" class="clearfix">
+  <a href="http://ccjeaty.github.io/blog/2016/01/05/clojure-functional-programming/" class="clearfix">
     <div class="pull-left image"></div>
     <div class="detail">
       <time>Tue, Jan 5, 2016</time>
@@ -52,12 +52,36 @@
 
   
   <article class="li">
-  <a href="http://localhost:1313/blog/2016/01/05/maven.war.plugin/" class="clearfix">
+  <a href="http://ccjeaty.github.io/blog/1/01/01/" class="clearfix">
     <div class="pull-left image"></div>
     <div class="detail">
-      <time>Tue, Jan 5, 2016</time>
-      <h2 class="title">maven.war.plugin</h2>
-      <div class="summary">maven war plugin 使用说明 [TOC] intro 主要用于处理在构建war包时的一些操作, 目前只用于对资源文件的处理.把目前使用到过的一些配置记录下来. 用以备忘. 直接贴一个比较完整的配置, 一看便知: &lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt; &lt;version&gt;2.6&lt;/version&gt; &lt;configuration&gt; &lt;filters&gt; &lt;!-- 集中管理变量值, --&gt; &lt;filter&gt;properties/config.prop&lt;/filter&gt; &lt;/filters&gt; &lt;nonFilteredFileExtensions&gt; &lt;!-- default value contains jpg,jpeg,gif,bmp,png --&gt; &lt;nonFilteredFileExtension&gt;conf&lt;/nonFilteredFileExtension&gt; &lt;/nonFilteredFileExtensions&gt; &lt;webResources&gt; &lt;resource&gt; &lt;!-- this is relative to the pom.xml directory --&gt; &lt;directory&gt;resource2&lt;/directory&gt; &lt;includes&gt; &lt;!-- excludes --&gt; &lt;include&gt;**/*.properties&lt;/include&gt; &lt;/includes&gt; &lt;!-- this is relative to war root dir, and it will replace all of the duplicate files --&gt; &lt;targetPath&gt;WEB-INF/classes&lt;/targetPath&gt; &lt;filtering&gt;true&lt;/filtering&gt; &lt;/resource&gt; &lt;/webResources&gt; &lt;/configuration&gt; &lt;/plugin&gt; &lt;/plugins&gt; &lt;/build&gt; 资源文件处理 执行compile命令的时候可以对项目的资源文件进行处理, 常用的处理有以下几种: - 替换变量(与profile配合使用) 在插件中的变量也是以${prop.name}方式来书写的, 如果文件内容中有相应的变量, 正好maven的ctx中又有相应的值,则会对变量进行替换.</div>
+      <time>Mon, Jan 1, 0001</time>
+      <h2 class="title"></h2>
+      <div class="summary">Idea 常用快捷键 [TOC] 文本操作类 文件搜索 C-F / C-R anywhere Shift + Shift (注意输入法切换冲突)</div>
+    </div>
+  </a>
+</article>
+
+  
+  <article class="li">
+  <a href="http://ccjeaty.github.io/blog/1/01/01/" class="clearfix">
+    <div class="pull-left image"></div>
+    <div class="detail">
+      <time>Mon, Jan 1, 0001</time>
+      <h2 class="title"></h2>
+      <div class="summary">Test TODO (defn test [size] (map #(prn %) size)) zhongwen I&rsquo;m e</div>
+    </div>
+  </a>
+</article>
+
+  
+  <article class="li">
+  <a href="http://ccjeaty.github.io/blog/1/01/01/" class="clearfix">
+    <div class="pull-left image"></div>
+    <div class="detail">
+      <time>Mon, Jan 1, 0001</time>
+      <h2 class="title"></h2>
+      <div class="summary">常用软件 bubun idea typora markdown listary navicat</div>
     </div>
   </a>
 </article>
@@ -71,9 +95,9 @@
 
     <div class="container-fluid">
       <footer class="site">
-        <p>&copy; 2016 Logs &nbsp;&nbsp;
-        Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>&nbsp;&nbsp;
-        Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank">Aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
+        <p>&copy; 2016 Logs</p>
+        <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>,</p>
+        <p>Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank">Aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
       </footer>
     </div>
 

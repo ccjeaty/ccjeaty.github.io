@@ -2,24 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2016-01-05T16:31:07+08:00</lastmod>
+    <loc>http://ccjeaty.github.io/</loc>
+    <lastmod>2016-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/blog/2016/01/05/clojure-functional-programming/</loc>
+    <loc>http://ccjeaty.github.io/FarBox/posts/mysql%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2016-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ccjeaty.github.io/blog/2016/01/05/clojure-functional-programming/</loc>
     <lastmod>2016-01-05T16:31:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/blog/2016/01/05/maven.war.plugin/</loc>
-    <lastmod>2016-01-05T11:44:21+08:00</lastmod>
+    <loc>http://ccjeaty.github.io/blog/1/01/01/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/about/</loc>
-    <lastmod>2016-01-05T11:37:10+08:00</lastmod>
+    <loc>http://ccjeaty.github.io/blog/1/01/01/</loc>
+  </url>
+  
+  <url>
+    <loc>http://ccjeaty.github.io/blog/1/01/01/</loc>
   </url>
   
 </urlset>

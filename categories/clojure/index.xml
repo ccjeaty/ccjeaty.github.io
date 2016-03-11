@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clojure on Logs</title>
-    <link>http://localhost:1313/categories/clojure/</link>
+    <link>http://ccjeaty.github.io/categories/clojure/</link>
     <description>Recent content in Clojure on Logs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 05 Jan 2016 16:31:07 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/clojure/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://ccjeaty.github.io/categories/clojure/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>clojure functional programming</title>
-      <link>http://localhost:1313/blog/2016/01/05/clojure-functional-programming/</link>
+      <link>http://ccjeaty.github.io/blog/2016/01/05/clojure-functional-programming/</link>
       <pubDate>Tue, 05 Jan 2016 16:31:07 +0800</pubDate>
       
-      <guid>http://localhost:1313/blog/2016/01/05/clojure-functional-programming/</guid>
+      <guid>http://ccjeaty.github.io/blog/2016/01/05/clojure-functional-programming/</guid>
       <description>
 
 &lt;h1 id=&#34;clojure函数式编程:0ba14bcd112cc5275625c24eb59b1cb6&#34;&gt;Clojure函数式编程&lt;/h1&gt;
